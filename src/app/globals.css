@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #FAFAF9;
+  --color-foreground: #1a1a1a;
+  --color-accent: #2563eb;
+  --color-accent-dark: #1d4ed8;
+  --color-muted: #6b7280;
+  --color-border: #e5e5e4;
+  --color-surface: #ffffff;
+  --color-surface-elevated: #f5f5f4;
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Selection */
+::selection {
+  background-color: #2563eb20;
+  color: #1a1a1a;
+}
+
+/* Subtle grid background */
+.bg-grid {
+  background-image: 
+    linear-gradient(to right, #e5e5e420 1px, transparent 1px),
+    linear-gradient(to bottom, #e5e5e420 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+/* Gradient mask for grid */
+.bg-grid-fade {
+  mask-image: linear-gradient(to bottom, white, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, white, transparent);
+}
+
+/* Smooth section transitions */
+section {
+  scroll-margin-top: 80px;
+}
+
+/* Form focus ring */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  ring: 2px;
+  ring-color: var(--color-accent);
+}

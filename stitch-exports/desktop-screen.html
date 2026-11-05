@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rebuild Labs — Premium AI Consulting &amp; Engineering Studio</title>
+<!-- Google Fonts: Inter & JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with Forms & Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration verbatim from Design System -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-error": "#ffffff",
+            "primary-container": "#1b1b1e",
+            "secondary-container": "#316bf3",
+            "surface-tint": "#5f5e61",
+            "on-surface-variant": "#47464b",
+            "tertiary-fixed": "#dfe2f1",
+            "primary-fixed": "#e4e1e6",
+            "on-tertiary-container": "#808391",
+            "surface-variant": "#e3e1ec",
+            "background": "#fbf8ff",
+            "surface-bright": "#fbf8ff",
+            "primary": "#000000",
+            "on-primary-fixed": "#1b1b1e",
+            "inverse-on-surface": "#f1effa",
+            "inverse-surface": "#2f3038",
+            "on-secondary-container": "#fefcff",
+            "secondary": "#0051d5",
+            "on-surface": "#1a1b22",
+            "error": "#ba1a1a",
+            "primary-fixed-dim": "#c8c5ca",
+            "tertiary": "#000000",
+            "surface": "#fbf8ff",
+            "error-container": "#ffdad6",
+            "surface-container-highest": "#e3e1ec",
+            "on-tertiary-fixed-variant": "#434652",
+            "tertiary-container": "#171b26",
+            "on-secondary-fixed-variant": "#003ea8",
+            "surface-container-lowest": "#ffffff",
+            "outline": "#77767b",
+            "on-tertiary-fixed": "#171b26",
+            "tertiary-fixed-dim": "#c3c6d4",
+            "on-background": "#1a1b22",
+            "on-primary-fixed-variant": "#47464a",
+            "on-tertiary": "#ffffff",
+            "surface-container-high": "#e8e7f1",
+            "surface-container": "#eeedf7",
+            "on-secondary-fixed": "#00174b",
+            "on-primary": "#ffffff",
+            "secondary-fixed": "#dbe1ff",
+            "surface-dim": "#dad9e3",
+            "on-secondary": "#ffffff",
+            "surface-container-low": "#f4f2fd",
+            "on-error-container": "#93000a",
+            "outline-variant": "#c8c5cb",
+            "on-primary-container": "#858387",
+            "secondary-fixed-dim": "#b4c5ff",
+            "inverse-primary": "#c8c5ca"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-2xl": "4rem",
+            "space-sm": "0.5rem",
+            "gutter-lg": "2rem",
+            "margin-lg": "4rem",
+            "space-xl": "2.5rem",
+            "space-3xl": "6rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "margin": "1rem",
+            "space-xs": "0.25rem",
+            "margin-md": "2rem",
+            "gutter": "1.5rem"
+          },
+          "fontFamily": {
+            "label-caps": ["Inter", "sans-serif"],
+            "mono-badge": ["JetBrains Mono", "monospace"],
+            "headline-lg": ["Inter", "sans-serif"],
+            "display-mobile": ["Inter", "sans-serif"],
+            "body-sm": ["Inter", "sans-serif"],
+            "body-md": ["Inter", "sans-serif"],
+            "mono-metric": ["JetBrains Mono", "monospace"],
+            "headline-sm": ["Inter", "sans-serif"],
+            "body-lg": ["Inter", "sans-serif"],
+            "display": ["Inter", "sans-serif"],
+            "mono-code": ["JetBrains Mono", "monospace"],
+            "headline-lg-mobile": ["Inter", "sans-serif"],
+            "headline-md": ["Inter", "sans-serif"]
+          },
+          "fontSize": {
+            "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "600" }],
+            "mono-badge": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "500" }],
+            "headline-lg": ["44px", { "lineHeight": "52px", "letterSpacing": "-0.03em", "fontWeight": "600" }],
+            "display-mobile": ["40px", { "lineHeight": "46px", "letterSpacing": "-0.025em", "fontWeight": "600" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400" }],
+            "mono-metric": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "500" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "display": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.035em", "fontWeight": "600" }],
+            "mono-code": ["13px", { "lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "headline-lg-mobile": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 20px;
+      line-height: 1;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-feature-settings: 'liga';
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    /* Technical Grid Overlay */
+    .blueprint-grid {
+      background-size: 32px 32px;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.035) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(0, 0, 0, 0.035) 1px, transparent 1px);
+    }
+    .blueprint-grid-dark {
+      background-size: 24px 24px;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body class="bg-[#FAFAF9] text-on-surface antialiased selection:bg-secondary-fixed selection:text-secondary font-body-md text-body-md min-h-screen">
+<!-- ========================================================================= -->
+<!-- 1. TOP APP BAR (Shared Components JSON Anchor: TopNavBar)                  -->
+<!-- ========================================================================= -->
+<header class="bg-surface-container-lowest/90 backdrop-blur-md border-b border-outline-variant/30 fixed top-0 left-0 right-0 z-50">
+<div class="max-w-7xl mx-auto px-margin md:px-margin-md lg:px-margin-lg h-16 flex items-center justify-between w-full">
+<!-- Brand Anchor -->
+<a class="flex items-center gap-space-sm group" href="#">
+<div class="w-3.5 h-3.5 bg-primary rounded-sm flex items-center justify-center relative">
+<div class="w-1.5 h-1.5 bg-secondary-container rounded-sm animate-pulse"></div>
+</div>
+<span class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase font-bold">
+          Rebuild Labs
+        </span>
+</a>
+<!-- Desktop Navigation Links (From JSON) -->
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-on-surface font-label-caps text-label-caps border-b-2 border-secondary pb-1" href="#capabilities">
+          Capabilities
+        </a>
+<a class="text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps transition-colors duration-150" href="#approach">
+          Approach
+        </a>
+<a class="text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps transition-colors duration-150" href="#work">
+          Work
+        </a>
+<a class="text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps transition-colors duration-150" href="#architecture">
+          Architecture
+        </a>
+<a class="text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps transition-colors duration-150" href="#studio">
+          Studio
+        </a>
+</nav>
+<!-- Right Action & System Status Indicator -->
+<div class="flex items-center gap-space-md">
+<!-- Live System Metric Pill -->
+<div class="hidden lg:flex items-center gap-2 px-2.5 py-1 bg-surface-container border border-outline-variant/50 rounded-full font-mono-badge text-mono-badge text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping inline-block"></span>
+<span>SYSTEM: AVAILABLE FOR Q2</span>
+</div>
+<a class="hidden sm:inline-flex items-center justify-center px-4 py-2 bg-primary text-on-primary rounded-lg font-label-caps text-label-caps border border-primary-container shadow-sm hover:bg-neutral-800 transition-all duration-100 ease-out active:scale-[0.99]" href="#contact">
+          Initiate Brief
+        </a>
+<!-- Mobile Menu Trigger -->
+<button class="md:hidden p-2 text-on-surface-variant hover:text-on-surface" onclick="document.getElementById('mobile-drawer').classList.toggle('hidden')" type="button">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</div>
+<!-- Mobile Drawer -->
+<div class="hidden md:hidden border-t border-outline-variant/30 bg-surface-container-lowest px-margin py-space-md shadow-lg" id="mobile-drawer">
+<div class="flex flex-col space-y-3 font-label-caps text-label-caps">
+<a class="text-secondary py-1" href="#capabilities">Capabilities</a>
+<a class="text-on-surface-variant hover:text-on-surface py-1" href="#approach">Approach</a>
+<a class="text-on-surface-variant hover:text-on-surface py-1" href="#work">Work</a>
+<a class="text-on-surface-variant hover:text-on-surface py-1" href="#architecture">Architecture</a>
+<a class="text-on-surface-variant hover:text-on-surface py-1" href="#studio">Studio</a>
+<a class="w-full text-center mt-2 px-4 py-2.5 bg-primary text-on-primary rounded-lg" href="#contact">Initiate Brief</a>
+</div>
+</div>
+</header>
+<!-- ========================================================================= -->
+<!-- 2. HERO SECTION: Architectural Precision & Neural Execution DAG           -->
+<!-- ========================================================================= -->
+<section class="pt-32 pb-space-3xl relative overflow-hidden blueprint-grid border-b border-outline-variant/30">
+<div class="max-w-7xl mx-auto px-margin md:px-margin-md lg:px-margin-lg">
+<!-- Top Pill Badge -->
+<div class="flex items-center gap-space-xs mb-space-lg">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-lowest border border-outline-variant/60 rounded-full shadow-[0_1px_2px_0_rgba(0,0,0,0.03)]">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-mono-badge text-mono-badge text-on-surface tracking-wider uppercase">
+            AI Consulting &amp; Engineering Studio
+          </span>
+</div>
+</div>
+<!-- Hero Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Left: Confident Proposition -->
+<div class="lg:col-span-6 space-y-space-lg">
+<h1 class="hidden md:block font-display text-display text-primary tracking-tight">
+            Complex problems. <br/>
+<span class="text-on-surface-variant">Intelligent solutions.</span>
+</h1>
+<h1 class="md:hidden font-display-mobile text-display-mobile text-primary tracking-tight">
+            Complex problems. <br/>
+<span class="text-on-surface-variant">Intelligent solutions.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
+            We help ambitious enterprise teams architect, build, and deploy production-ready AI systems, resilient agentic orchestration, and custom high-concurrency cloud infrastructure.
+          </p>
+<!-- CTAs -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-md pt-space-xs">
+<a class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-primary text-on-primary font-label-caps text-label-caps rounded-lg border border-primary-container shadow-sm hover:bg-neutral-800 transition-all duration-100 ease-out active:scale-[0.99] group" href="#contact">
+<span>Discuss Your Project</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-0.5 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<a class="inline-flex items-center justify-center px-6 py-3.5 bg-surface-container-lowest text-on-surface font-label-caps text-label-caps rounded-lg border border-outline-variant hover:bg-surface-container hover:border-outline transition-colors duration-150 shadow-[0_1px_2px_0_rgba(0,0,0,0.03)]" href="#capabilities">
+              Explore Our Expertise
+            </a>
+</div>
+<!-- Micro Proof Markers -->
+<div class="pt-space-md flex items-center gap-6 border-t border-outline-variant/30">
+<div>
+<div class="font-mono-metric text-headline-sm text-primary font-bold">100%</div>
+<div class="font-mono-badge text-mono-badge text-on-surface-variant uppercase">Deterministic Guardrails</div>
+</div>
+<div class="h-8 w-px bg-outline-variant/40"></div>
+<div>
+<div class="font-mono-metric text-headline-sm text-primary font-bold">&lt; 45ms</div>
+<div class="font-mono-badge text-mono-badge text-on-surface-variant uppercase">P95 Inference Overhead</div>
+</div>
+<div class="h-8 w-px bg-outline-variant/40"></div>
+<div>
+<div class="font-mono-metric text-headline-sm text-primary font-bold">Zero</div>
+<div class="font-mono-badge text-mono-badge text-on-surface-variant uppercase">Vaporware Guarantee</div>
+</div>
+</div>
+</div>
+<!-- Right: Neural Execution DAG / Visual Pipeline Architecture Module -->
+<div class="lg:col-span-6">
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/60 shadow-[0_8px_24px_-4px_rgba(0,0,0,0.04)] p-space-lg relative overflow-hidden">
+<!-- Window Console Top Bar -->
+<div class="flex items-center justify-between pb-space-md border-b border-outline-variant/30 mb-space-md">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-outline-variant"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-outline-variant"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-outline-variant"></span>
+<span class="font-mono-badge text-mono-badge text-on-surface-variant ml-2">sys-topology://runtime-mesh-v4</span>
+</div>
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container font-mono-badge text-mono-badge text-secondary">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+                ACTIVE PIPELINE
+              </div>
+</div>
+<!-- DAG Network Visual Graph -->
+<div class="space-y-space-md relative">
+<!-- Node 1: Vector & Sparse Ingestion -->
+<div class="flex items-center justify-between p-space-md rounded-lg bg-surface-container-low border border-outline-variant/40">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-surface-container-lowest border border-outline-variant flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-base" data-icon="database">database</span>
+</div>
+<div>
+<div class="font-label-caps text-label-caps text-primary">Vector &amp; Sparse Ingestion</div>
+<div class="font-mono-badge text-mono-badge text-on-surface-variant">Chunk size: 512 | HyDE Re-ranking</div>
+</div>
+</div>
+<span class="px-2 py-0.5 bg-surface-container rounded font-mono-badge text-mono-badge text-on-surface">3.2k tps</span>
+</div>
+<!-- Connecting Line with Micro Indicator -->
+<div class="flex justify-center -my-2 relative z-10">
+<div class="flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-surface-container-lowest border border-outline-variant font-mono-badge text-[10px] text-on-surface-variant shadow-xs">
+<span class="material-symbols-outlined text-xs text-secondary" data-icon="south">south</span>
+                  Context Window Filter
+                </div>
+</div>
+<!-- Node 2: Multi-Agent Orchestrator -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest border-2 border-secondary/30 shadow-[0_2px_6px_-1px_rgba(0,0,0,0.02)] relative">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-caps text-label-caps text-primary">Multi-Agent Orchestrator</span>
+</div>
+<span class="font-mono-badge text-mono-badge text-secondary px-2 py-0.5 bg-secondary-fixed/30 rounded">LangGraph Core</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Recursive task decomposition • Sub-agent dynamic state delegation • Tool-use verification
+                </p>
+<div class="mt-3 pt-2 border-t border-outline-variant/20 flex items-center justify-between font-mono-badge text-[10px] text-on-surface-variant">
+<span>State: Deterministic Graph</span>
+<span class="text-secondary">99.4% Latency SLA</span>
+</div>
+</div>
+<!-- Connecting Line -->
+<div class="flex justify-center -my-2 relative z-10">
+<div class="flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-surface-container-lowest border border-outline-variant font-mono-badge text-[10px] text-on-surface-variant shadow-xs">
+<span class="material-symbols-outlined text-xs text-secondary" data-icon="south">south</span>
+                  Structured Tool Call Routing
+                </div>
+</div>
+<!-- Split Nodes: Evaluation Gate & Production Gateway -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="p-space-sm bg-surface-container-low rounded-lg border border-outline-variant/40">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="verified_user">verified_user</span>
+<span class="font-label-caps text-label-caps text-primary">Evaluation Gate</span>
+</div>
+<div class="font-mono-badge text-[10px] text-on-surface-variant">Zero Hallucination Guardrails</div>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg border border-outline-variant/40">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="terminal">terminal</span>
+<span class="font-label-caps text-label-caps text-primary">Production Gateway</span>
+</div>
+<div class="font-mono-badge text-[10px] text-on-surface-variant">Semantic Cache &amp; Fallback</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 3. WHAT WE DO: 3-Column Grid, 6 Core Service Cards                       -->
+<!-- ========================================================================= -->
+<section class="py-space-3xl bg-[#FAFAF9] border-b border-outline-variant/30" id="capabilities">
+<div class="max-w-7xl mx-auto px-margin md:px-margin-md lg:px-margin-lg">
+<!-- Section Header -->
+<div class="max-w-2xl mb-space-2xl">
+<div class="inline-flex items-center gap-2 px-2.5 py-1 bg-surface-container rounded-full font-mono-badge text-mono-badge text-on-surface-variant mb-space-sm">
+<span>[01 / 06] CAPABILITIES</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">
+          Engineering capabilities crafted for technical superiority.
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-sm">
+          We do not deliver shallow API wrappers. We architect high-performance, hardened artificial intelligence infrastructure designed to operate under strict enterprise constraints.
+        </p>
+</div>
+<!-- 6-Card Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<!-- Service 01 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg border border-outline-variant/60 hover:border-outline hover:shadow-[0_8px_24px_-4px_rgba(0,0,0,0.04)] transition-all duration-150 flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-mono-badge text-mono-badge text-secondary font-bold">[01]</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary transition-colors" data-icon="insights">insights</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-sm">
+              AI Consulting &amp; Strategy
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Enterprise roadmap design, LLM architectural feasibility audits, ROI modeling, and vendor-neutral model selection tailored to your compliance stack.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm border-t border-outline-variant/20 flex flex-wrap gap-1.5 font-mono-badge text-[10px] text-on-surface-variant">
+<span class="px-2 py-0.5 bg-surface-container-low rounded">ROI Audits</span>
+<span class="px-2 py-0.5 bg-surface-container-low rounded">Tech Feasibility</span>
+<span class="px-2 py-0.5 bg-surface-container-low rounded">Governance</span>
+</div>
+</div>
+<!-- Service 02 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg border border-outline-variant/60 hover:border-outline hover:shadow-[0_8px_24px_-4px_rgba(0,0,0,0.04)] transition-all duration-150 flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-mono-badge text-mono-badge text-secondary font-bold">[02]</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary transition-colors" data-icon="schema">schema</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-sm">
+              GenAI &amp; Agentic Systems
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Multi-agent coordination using LangGraph and CrewAI. Custom tool execution, state-persistence backends, and self-correcting task runners.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm border-t border-outline-variant/20 flex flex-wrap gap-1.5 font-mono-badge text-[10px] text-on-surface-variant">
+<span class="px-2 py-0.5 bg-surface-container-low rounded">LangGraph</span>
+<span class="px-2 py-0.5 bg-surface-container-low rounded">Autonomous Loops</span>
+<span class="px-2 py-0.5 bg-surface-container-low rounded">Tool Use</span>
+</div>
+</div>
+<!-- Service 03 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg border border-outline-variant/60 hover:border-outline hover:shadow-[0_8px_24px_-4px_rgba(0,0,0,0.04)] transition-all duration-150 flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-mono-badge text-mono-badge text-secondary font-bold">[03]</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary transition-colors" data-icon="code_blocks">code_blocks</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-sm">
+              Custom Software Development
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              High-concurrency distributed backends, streaming UI architectures, microservice decoupling, and cloud-native enterprise-grade products.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm border-t border-outline-variant/20 flex flex-wrap gap-1.5 font-mono-badge text-[10px] text-on-surface-variant">
+<span class="px-2 py-0.5 bg-surface-container-low rounded">FastAPI</span>
+<span class="px-2 py-0.5 bg-surface-container-low rounded">TypeScript</span>
+<span class="px-2 py-0.5 bg-surface-container-low rounded">Next.js App Router</span>
+</div>
+</div>
+<!-- Service 04 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg border border-outline-variant/60 hover:border-outline hover:shadow-[0_8px_24px_-4px_rgba(0,0,0,0.04)] transition-all duration-150 flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-mono-badge text-mono-badge text-secondary font-bold">[04]</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary transition-colors" data-icon="sync_alt">sync_alt</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-sm">
+              AI Automation &amp; Integration
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Bespoke ERP/CRM data ingestion bridges, cognitive document processing, parsing unstructured payloads, and webhook streaming workflows.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm border-t border-outline-variant/20 flex flex-wrap gap-1.5 font-mono-badge text-[10px] text-on-surface-variant">
+<span class="px-2 py-0.5 bg-surface-container-low rounded">OCR Pipelines</span>
+<span class="px-2 py-0.5 bg-surface-container-low rounded">ERP Bridges</span>
+<span class="px-2 py-0.5 bg-surface-container-low rounded">Event Busses</span>
+</div>
+</div>
+<!-- Service 05 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg border border-outline-variant/60 hover:border-outline hover:shadow-[0_8px_24px_-4px_rgba(0,0,0,0.04)] transition-all duration-150 flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-mono-badge text-mono-badge text-secondary font-bold">[05]</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary transition-colors" data-icon="cloud_sync">cloud_sync</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-sm">
+              Cloud &amp; AI Architecture
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Scalable inference pipelines, private GPU cluster deployment via Kubernetes, low-latency vector databases, and zero-trust VPC configurations.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm border-t border-outline-variant/20 flex flex-wrap gap-1.5 font-mono-badge text-[10px] text-on-surface-variant">
+<span class="px-2 py-0.5 bg-surface-container-low rounded">SageMaker</span>
+<span class="px-2 py-0.5 bg-surface-container-low rounded">Qdrant Clusters</span>
+<span class="px-2 py-0.5 bg-surface-container-low rounded">Terraform</span>
+</div>
+</div>
+<!-- Service 06 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg border border-outline-variant/60 hover:border-outline hover:shadow-[0_8px_24px_-4px_rgba(0,0,0,0.04)] transition-all duration-150 flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-mono-badge text-mono-badge text-secondary font-bold">[06]</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary transition-colors" data-icon="security">security</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-sm">
+              Fractional AI Advisory
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Fractional Head of AI leadership, rigorous safety benchmarking, evaluation harness implementations, and hands-on developer training.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm border-t border-outline-variant/20 flex flex-wrap gap-1.5 font-mono-badge text-[10px] text-on-surface-variant">
+<span class="px-2 py-0.5 bg-surface-container-low rounded">Fractional CTO</span>
+<span class="px-2 py-0.5 bg-surface-container-low rounded">Red Teaming</span>
+<span class="px-2 py-0.5 bg-surface-container-low rounded">Benchmarking</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 4. PROBLEMS WE SOLVE: High-Contrast Obsidian Section (#090D16)            -->
+<!-- ========================================================================= -->
+<section class="py-space-3xl bg-[#090D16] text-[#F1EFFA] relative blueprint-grid-dark" id="approach">
+<div class="max-w-7xl mx-auto px-margin md:px-margin-md lg:px-margin-lg">
+<!-- Top Tagline & Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-2xl gap-space-md">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-[#171B26] border border-white/10 rounded-full font-mono-badge text-mono-badge text-[#60A5FA] mb-space-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-[#60A5FA] animate-pulse"></span>
+            DIAGNOSTICS &amp; REMEDIATION
+          </div>
+<h2 class="font-headline-lg text-headline-lg text-white tracking-tight">
+            Enterprise Bottlenecks → <span class="text-[#60A5FA]">Production Velocity</span>
+</h2>
+</div>
+<p class="font-body-md text-body-md text-[#94A3B8] max-w-md">
+          Most enterprise AI initiatives fail between the proof-of-concept and deployment phases. We eliminate the structural vulnerabilities that stall systems.
+        </p>
+</div>
+<!-- 4 Problem/Solution Comparison Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- Card 1 -->
+<div class="bg-[#111827] rounded-xl p-space-lg border border-white/10 hover:border-white/20 transition-all duration-150 space-y-4 relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-mono-badge text-mono-badge text-[#EF4444] uppercase tracking-wider">Problem 01</span>
+<span class="font-mono-badge text-mono-badge text-[#94A3B8]">Production Reliability</span>
+</div>
+<div class="text-white font-headline-sm text-headline-sm">PoC to Production Chasm</div>
+<div class="p-space-md bg-[#0B0F19] rounded-lg border border-white/5 space-y-1">
+<div class="font-mono-badge text-[11px] text-[#60A5FA] flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm" data-icon="check_circle">check_circle</span>
+              REBUILD LABS ARCHITECTURE
+            </div>
+<p class="font-body-sm text-body-sm text-[#E2E8F0]">
+              Hardened LLM pipelines with deterministic guardrails, structured JSON validation, and automated fallback routing across multiple providers.
+            </p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-[#111827] rounded-xl p-space-lg border border-white/10 hover:border-white/20 transition-all duration-150 space-y-4 relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-mono-badge text-mono-badge text-[#EF4444] uppercase tracking-wider">Problem 02</span>
+<span class="font-mono-badge text-mono-badge text-[#94A3B8]">Unit Economics</span>
+</div>
+<div class="text-white font-headline-sm text-headline-sm">Runaway Inference Costs</div>
+<div class="p-space-md bg-[#0B0F19] rounded-lg border border-white/5 space-y-1">
+<div class="font-mono-badge text-[11px] text-[#60A5FA] flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm" data-icon="check_circle">check_circle</span>
+              REBUILD LABS ARCHITECTURE
+            </div>
+<p class="font-body-sm text-body-sm text-[#E2E8F0]">
+              Intelligent semantic caching layers, smaller task-distilled SLMs, dynamic quantization, and intelligent prompt-token pruning (reducing billings by up to 68%).
+            </p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-[#111827] rounded-xl p-space-lg border border-white/10 hover:border-white/20 transition-all duration-150 space-y-4 relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-mono-badge text-mono-badge text-[#EF4444] uppercase tracking-wider">Problem 03</span>
+<span class="font-mono-badge text-mono-badge text-[#94A3B8]">Agent Reliability</span>
+</div>
+<div class="text-white font-headline-sm text-headline-sm">Fragile Agent Workflows</div>
+<div class="p-space-md bg-[#0B0F19] rounded-lg border border-white/5 space-y-1">
+<div class="font-mono-badge text-[11px] text-[#60A5FA] flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm" data-icon="check_circle">check_circle</span>
+              REBUILD LABS ARCHITECTURE
+            </div>
+<p class="font-body-sm text-body-sm text-[#E2E8F0]">
+              Resilient finite-state machines, programmatic evaluation loops, dead-letter task queues, and auto-recovery mechanisms for unpredictable runtime outputs.
+            </p>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-[#111827] rounded-xl p-space-lg border border-white/10 hover:border-white/20 transition-all duration-150 space-y-4 relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-mono-badge text-mono-badge text-[#EF4444] uppercase tracking-wider">Problem 04</span>
+<span class="font-mono-badge text-mono-badge text-[#94A3B8]">Retrieval Precision</span>
+</div>
+<div class="text-white font-headline-sm text-headline-sm">Siloed Unstructured Data</div>
+<div class="p-space-md bg-[#0B0F19] rounded-lg border border-white/5 space-y-1">
+<div class="font-mono-badge text-[11px] text-[#60A5FA] flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm" data-icon="check_circle">check_circle</span>
+              REBUILD LABS ARCHITECTURE
+            </div>
+<p class="font-body-sm text-body-sm text-[#E2E8F0]">
+              Hybrid sparse-dense RAG architectures, multi-tenant document permission isolation, and metadata enrichment graphs for zero leakage and high context precision.
+            </p>
+</div>
+</div>
+</div>
+<!-- Action Anchor -->
+<div class="mt-space-xl flex flex-col sm:flex-row items-center justify-between p-space-lg bg-[#111827] rounded-xl border border-white/10 gap-space-md">
+<div>
+<div class="text-white font-headline-sm text-headline-sm">Have an enterprise bottleneck holding back your AI release?</div>
+<div class="font-body-sm text-body-sm text-[#94A3B8]">Our solutions architects perform rapid architectural audits within 5 business days.</div>
+</div>
+<a class="px-6 py-3 bg-[#2563EB] text-white font-label-caps text-label-caps rounded-lg hover:bg-[#1D4ED8] transition-colors shadow-[0_0_20px_rgba(37,99,235,0.4)] whitespace-nowrap" href="#contact">
+          Let's Solve It
+        </a>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 5. HOW WE WORK: 4-Step Horizontal Process Pipeline                        -->
+<!-- ========================================================================= -->
+<section class="py-space-3xl bg-[#FAFAF9] border-b border-outline-variant/30">
+<div class="max-w-7xl mx-auto px-margin md:px-margin-md lg:px-margin-lg">
+<div class="max-w-2xl mb-space-2xl">
+<div class="inline-flex items-center gap-2 px-2.5 py-1 bg-surface-container rounded-full font-mono-badge text-mono-badge text-on-surface-variant mb-space-sm">
+<span>EXECUTION CADENCE</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">
+          Deterministic execution from diagnostic to planetary scale.
+        </h2>
+</div>
+<!-- 4 Connected Pipeline Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md relative">
+<!-- Step 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl border border-outline-variant/60 shadow-[0_1px_2px_0_rgba(0,0,0,0.03)] flex flex-col justify-between relative group hover:border-outline transition-all">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-mono-badge text-mono-badge text-secondary font-bold">01 / STAGE</span>
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Discover</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Deep-dive diagnostic sessions, existing codebase &amp; technical debt audit, context window requirements, and clear feasibility roadmap.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-xs border-t border-outline-variant/20 font-mono-badge text-[10px] text-on-surface-variant">
+            Deliverable: Technical Spec &amp; PRD
+          </div>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl border border-outline-variant/60 shadow-[0_1px_2px_0_rgba(0,0,0,0.03)] flex flex-col justify-between relative group hover:border-outline transition-all">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-mono-badge text-mono-badge text-secondary font-bold">02 / STAGE</span>
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Architect</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              System topology design, failover patterns, red-teaming criteria, safety guardrail specifications, and latency/cost budget envelopes.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-xs border-t border-outline-variant/20 font-mono-badge text-[10px] text-on-surface-variant">
+            Deliverable: Architecture Topology
+          </div>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl border border-outline-variant/60 shadow-[0_1px_2px_0_rgba(0,0,0,0.03)] flex flex-col justify-between relative group hover:border-outline transition-all">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-mono-badge text-mono-badge text-secondary font-bold">03 / STAGE</span>
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Build</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              High-velocity bi-weekly sprints, test-driven LLM evaluation harnesses, continuous staging environment deployments, and agent integration.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-xs border-t border-outline-variant/20 font-mono-badge text-[10px] text-on-surface-variant">
+            Deliverable: Production Artifacts
+          </div>
+</div>
+<!-- Step 4 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl border border-outline-variant/60 shadow-[0_1px_2px_0_rgba(0,0,0,0.03)] flex flex-col justify-between relative group hover:border-outline transition-all">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-mono-badge text-mono-badge text-secondary font-bold">04 / STAGE</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Deploy &amp; Improve</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Zero-downtime rollouts, continuous telemetry instrumentation, automated prompt regression test suites, and model distillation cycles.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-xs border-t border-outline-variant/20 font-mono-badge text-[10px] text-on-surface-variant">
+            Deliverable: 99.9% Monitored System
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 6. TECHNOLOGY ECOSYSTEM: Categorized Technical Matrix                    -->
+<!-- ========================================================================= -->
+<section class="py-space-3xl bg-surface-container-lowest border-b border-outline-variant/30" id="architecture">
+<div class="max-w-7xl mx-auto px-margin md:px-margin-md lg:px-margin-lg">
+<div class="max-w-2xl mb-space-2xl">
+<div class="inline-flex items-center gap-2 px-2.5 py-1 bg-surface-container rounded-full font-mono-badge text-mono-badge text-on-surface-variant mb-space-sm">
+<span>STACK SPECIFICATION</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">
+          Modern, battle-tested technology ecosystem.
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-sm">
+          We build with zero lock-in primitives, prioritizing open protocols, state-of-the-art weights, and verifiable latency targets.
+        </p>
+</div>
+<!-- 4 Categories Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<!-- Category 1 -->
+<div class="space-y-space-sm">
+<div class="font-label-caps text-label-caps text-primary border-b border-outline-variant/40 pb-2 flex items-center justify-between">
+<span>AI &amp; Models</span>
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="neurology">neurology</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 bg-[#FAFAF9] border border-outline-variant/60 rounded-md font-mono-badge text-mono-badge text-on-surface">OpenAI GPT-4o</span>
+<span class="px-3 py-1.5 bg-[#FAFAF9] border border-outline-variant/60 rounded-md font-mono-badge text-mono-badge text-on-surface">Claude 3.5 Sonnet</span>
+<span class="px-3 py-1.5 bg-[#FAFAF9] border border-outline-variant/60 rounded-md font-mono-badge text-mono-badge text-on-surface">Google Gemini 1.5</span>
+<span class="px-3 py-1.5 bg-[#FAFAF9] border border-outline-variant/60 rounded-md font-mono-badge text-mono-badge text-on-surface">LangGraph</span>
+<span class="px-3 py-1.5 bg-[#FAFAF9] border border-outline-variant/60 rounded-md font-mono-badge text-mono-badge text-on-surface">LlamaIndex</span>
+<span class="px-3 py-1.5 bg-[#FAFAF9] border border-outline-variant/60 rounded-md font-mono-badge text-mono-badge text-on-surface">Pinecone</span>
+<span class="px-3 py-1.5 bg-[#FAFAF9] border border-outline-variant/60 rounded-md font-mono-badge text-mono-badge text-on-surface">Qdrant</span>
+<span class="px-3 py-1.5 bg-[#FAFAF9] border border-outline-variant/60 rounded-md font-mono-badge text-mono-badge text-on-surface">vLLM</span>
+</div>
+</div>
+<!-- Category 2 -->
+<div class="space-y-space-sm">
+<div class="font-label-caps text-label-caps text-primary border-b border-outline-variant/40 pb-2 flex items-center justify-between">
+<span>Cloud &amp; Infrastructure</span>
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="cloud">cloud</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 bg-[#FAFAF9] border border-outline-variant/60 rounded-md font-mono-badge text-mono-badge text-on-surface">AWS SageMaker</span>
+<span class="px-3 py-1.5 bg-[#FAFAF9] border border-outline-variant/60 rounded-md font-mono-badge text-mono-badge text-on-surface">GCP Vertex AI</span>
+<span class="px-3 py-1.5 bg-[#FAFAF9] border border-outline-variant/60 rounded-md font-mono-badge text-mono-badge text-on-surface">Azure AI</span>
+<span class="px-3 py-1.5 bg-[#FAFAF9] border border-outline-variant/60 rounded-md font-mono-badge text-mono-badge text-on-surface">Docker</span>
+<span class="px-3 py-1.5 bg-[#FAFAF9] border border-outline-variant/60 rounded-md font-mono-badge text-mono-badge text-on-surface">Kubernetes</span>
+<span class="px-3 py-1.5 bg-[#FAFAF9] border border-outline-variant/60 rounded-md font-mono-badge text-mono-badge text-on-surface">Terraform</span>
+<span class="px-3 py-1.5 bg-[#FAFAF9] border border-outline-variant/60 rounded-md font-mono-badge text-mono-badge text-on-surface">Fly.io</span>
+</div>
+</div>
+<!-- Category 3 -->
+<div class="space-y-space-sm">
+<div class="font-label-caps text-label-caps text-primary border-b border-outline-variant/40 pb-2 flex items-center justify-between">
+<span>Core Engineering</span>
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="terminal">terminal</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 bg-[#FAFAF9] border border-outline-variant/60 rounded-md font-mono-badge text-mono-badge text-on-surface">Python 3.12</span>
+<span class="px-3 py-1.5 bg-[#FAFAF9] border border-outline-variant/60 rounded-md font-mono-badge text-mono-badge text-on-surface">FastAPI</span>
+<span class="px-3 py-1.5 bg-[#FAFAF9] border border-outline-variant/60 rounded-md font-mono-badge text-mono-badge text-on-surface">Next.js 15</span>
+<span class="px-3 py-1.5 bg-[#FAFAF9] border border-outline-variant/60 rounded-md font-mono-badge text-mono-badge text-on-surface">TypeScript</span>
+<span class="px-3 py-1.5 bg-[#FAFAF9] border border-outline-variant/60 rounded-md font-mono-badge text-mono-badge text-on-surface">PostgreSQL (pgvector)</span>
+<span class="px-3 py-1.5 bg-[#FAFAF9] border border-outline-variant/60 rounded-md font-mono-badge text-mono-badge text-on-surface">Redis</span>
+<span class="px-3 py-1.5 bg-[#FAFAF9] border border-outline-variant/60 rounded-md font-mono-badge text-mono-badge text-on-surface">ClickHouse</span>
+</div>
+</div>
+<!-- Category 4 -->
+<div class="space-y-space-sm">
+<div class="font-label-caps text-label-caps text-primary border-b border-outline-variant/40 pb-2 flex items-center justify-between">
+<span>Observability &amp; Eval</span>
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="monitoring">monitoring</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 bg-[#FAFAF9] border border-outline-variant/60 rounded-md font-mono-badge text-mono-badge text-on-surface">LangSmith</span>
+<span class="px-3 py-1.5 bg-[#FAFAF9] border border-outline-variant/60 rounded-md font-mono-badge text-mono-badge text-on-surface">Arize Phoenix</span>
+<span class="px-3 py-1.5 bg-[#FAFAF9] border border-outline-variant/60 rounded-md font-mono-badge text-mono-badge text-on-surface">OpenTelemetry</span>
+<span class="px-3 py-1.5 bg-[#FAFAF9] border border-outline-variant/60 rounded-md font-mono-badge text-mono-badge text-on-surface">Weights &amp; Biases</span>
+<span class="px-3 py-1.5 bg-[#FAFAF9] border border-outline-variant/60 rounded-md font-mono-badge text-mono-badge text-on-surface">Ragas Framework</span>
+<span class="px-3 py-1.5 bg-[#FAFAF9] border border-outline-variant/60 rounded-md font-mono-badge text-mono-badge text-on-surface">Prometheus</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 7. ABOUT THE STUDIO & FOUNDER: Elevated Leadership Profile                -->
+<!-- ========================================================================= -->
+<section class="py-space-3xl bg-[#FAFAF9] border-b border-outline-variant/30" id="studio">
+<div class="max-w-7xl mx-auto px-margin md:px-margin-md lg:px-margin-lg">
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/60 p-space-lg md:p-space-xl shadow-[0_1px_2px_0_rgba(0,0,0,0.03)]">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Image & Credentials Card -->
+<div class="lg:col-span-4">
+<div class="relative rounded-lg overflow-hidden border border-outline-variant/40 bg-surface-container">
+<img class="w-full h-80 object-cover grayscale contrast-125" data-alt="Editorial portrait of technical founder Aditya Kadam in a sleek architectural modern studio with clean natural daylight, high contrast lighting, dressed in minimalist black designer attire, conveying sharp engineering authority and technological elegance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUXsZl7TNBaYquGYdQluidXlBBq86hINCsFmShIQEOcny0OuSAek2Aw3ICFfv6G3rPnb_FFa6Xd_TYNscOWs7ItSePUc60gB37dH4IFMaNrsIB6IgU5xnE72hBN9-kxaH1MJ5fpAZXkSn3-IeFJ3PYSZmj1yWch4WmvEKBauB7MNE5kNmWfu_8PUCKY53Eab8J8DFrPHn8gXV4_OqNE4Ic5IdmxomiMcCqVZf0jVKffFBx9njgiWJqQXtvfHDlGt5cDtcDccRz6NI"/>
+<div class="p-space-md bg-surface-container-lowest border-t border-outline-variant/30">
+<div class="font-headline-sm text-headline-sm text-primary">Aditya Kadam</div>
+<div class="font-mono-badge text-mono-badge text-secondary">Founder &amp; Principal AI Architect</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1">3+ Years Enterprise AI Experience</div>
+</div>
+</div>
+</div>
+<!-- Studio Manifesto & Details -->
+<div class="lg:col-span-8 space-y-space-md">
+<div class="inline-flex items-center gap-2 px-2.5 py-1 bg-surface-container rounded-full font-mono-badge text-mono-badge text-on-surface-variant">
+<span>PRINCIPAL-LED ENGAGEMENTS</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-primary tracking-tight">
+              Direct engineering leadership. No junior delegates.
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Rebuild Labs was founded by Aditya Kadam to eliminate the friction common in legacy consulting agencies. We partner directly with CTOs, founders, and VP-level engineering leadership across Southeast Asia and global enterprise markets to ship resilient machine intelligence.
+            </p>
+<!-- Highlights Checklist -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md pt-space-xs">
+<div class="p-space-sm bg-[#FAFAF9] rounded border border-outline-variant/40">
+<div class="font-label-caps text-label-caps text-primary mb-1">Production-First Mindset</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Systems designed to scale cleanly beyond prototyping.</div>
+</div>
+<div class="p-space-sm bg-[#FAFAF9] rounded border border-outline-variant/40">
+<div class="font-label-caps text-label-caps text-primary mb-1">Zero Vaporware Guarantee</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Working software, evaluated harness code, and clear IP ownership.</div>
+</div>
+<div class="p-space-sm bg-[#FAFAF9] rounded border border-outline-variant/40">
+<div class="font-label-caps text-label-caps text-primary mb-1">Direct Engineering</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Talk directly with the senior architects writing your codebase.</div>
+</div>
+</div>
+<!-- External Portfolio Link Button -->
+<div class="pt-space-sm">
+<a class="inline-flex items-center gap-2 px-5 py-2.5 bg-surface-container-lowest text-on-surface border border-outline-variant hover:border-outline font-label-caps text-label-caps rounded-lg shadow-xs transition-colors group" href="https://about.rebuildlabs.in" rel="noopener noreferrer" target="_blank">
+<span>View Founder's Portfolio</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-0.5 transition-transform" data-icon="arrow_outward">arrow_outward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 8. WORK WITH US: Two Primary Structured Engagement Tracks                 -->
+<!-- ========================================================================= -->
+<section class="py-space-3xl bg-[#FAFAF9] border-b border-outline-variant/30" id="work">
+<div class="max-w-7xl mx-auto px-margin md:px-margin-md lg:px-margin-lg">
+<div class="max-w-2xl mb-space-2xl">
+<div class="inline-flex items-center gap-2 px-2.5 py-1 bg-surface-container rounded-full font-mono-badge text-mono-badge text-on-surface-variant mb-space-sm">
+<span>ENGAGEMENT MODELS</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">
+          Structured for speed, alignment, and maximum impact.
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-sm">
+          Choose between high-leverage strategic guidance or end-to-end implementation sprints.
+        </p>
+</div>
+<!-- Side-by-Side Model Cards -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+<!-- Track 1: Consultation & Advisory -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg md:p-space-xl border border-outline-variant/60 shadow-[0_1px_2px_0_rgba(0,0,0,0.03)] flex flex-col justify-between">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="font-mono-badge text-mono-badge text-secondary font-bold">TRACK A</span>
+<span class="px-2.5 py-1 bg-surface-container rounded font-mono-badge text-mono-badge text-on-surface-variant">Retainer or SOW</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">Consultation &amp; Advisory</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Designed for technical leadership teams looking to validate architectures, select the right foundational models, prevent cost overruns, and ensure security before deploying capital.
+            </p>
+<ul class="space-y-2.5 pt-space-xs font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="check">check</span>
+                System topology &amp; architectural review sessions
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="check">check</span>
+                Model selection &amp; vendor lock-in mitigation
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="check">check</span>
+                AI data readiness &amp; vector infrastructure audits
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="check">check</span>
+                Weekly fractional office hours with Aditya Kadam
+              </li>
+</ul>
+</div>
+<div class="mt-space-xl pt-space-md border-t border-outline-variant/30 flex items-center justify-between">
+<span class="font-mono-badge text-mono-badge text-on-surface-variant">Typically 4-8 week engagements</span>
+<a class="px-4 py-2 bg-surface-container-low hover:bg-surface-container text-on-surface font-label-caps text-label-caps rounded-lg border border-outline-variant transition-colors" href="#contact">
+              Book Advisory
+            </a>
+</div>
+</div>
+<!-- Track 2: Engineering & Development -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg md:p-space-xl border-2 border-secondary shadow-[0_8px_24px_-4px_rgba(0,0,0,0.04)] flex flex-col justify-between relative">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="font-mono-badge text-mono-badge text-secondary font-bold">TRACK B</span>
+<span class="px-2.5 py-1 bg-secondary-fixed/50 text-secondary rounded font-mono-badge text-mono-badge font-semibold">Turnkey Delivery</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">Engineering &amp; Development</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Full-cycle implementation sprints where our engineers embed and ship production-grade agentic systems, scalable vector pipelines, or custom enterprise platforms.
+            </p>
+<ul class="space-y-2.5 pt-space-xs font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="check">check</span>
+                Autonomous multi-agent systems and custom toolsets
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="check">check</span>
+                Hybrid RAG engines with permission isolation
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="check">check</span>
+                Automated continuous testing &amp; evaluation harnesses
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="check">check</span>
+                Complete IP transfer &amp; developer handoff documentation
+              </li>
+</ul>
+</div>
+<div class="mt-space-xl pt-space-md border-t border-outline-variant/30 flex items-center justify-between">
+<span class="font-mono-badge text-mono-badge text-on-surface-variant">Bi-weekly sprint deliverables</span>
+<a class="px-4 py-2 bg-primary hover:bg-neutral-800 text-on-primary font-label-caps text-label-caps rounded-lg transition-colors" href="#contact">
+              Deploy Sprint
+            </a>
+</div>
+</div>
+</div>
+<!-- Engagement Structures Strip -->
+<div class="mt-space-lg p-space-md bg-surface-container rounded-lg border border-outline-variant/40 flex flex-wrap items-center justify-around gap-4 text-center">
+<span class="font-mono-badge text-mono-badge text-on-surface">• FIXED-SCOPE MILESTONES</span>
+<span class="font-mono-badge text-mono-badge text-on-surface">• RETAINER ADVISORY</span>
+<span class="font-mono-badge text-mono-badge text-on-surface">• DEDICATED ENGINEERING SPRINTS</span>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 9. CONTACT / LEAD GENERATION: High-End Obsidian Module                    -->
+<!-- ========================================================================= -->
+<section class="py-space-3xl bg-[#090D16] text-[#F1EFFA] blueprint-grid-dark relative" id="contact">
+<div class="max-w-4xl mx-auto px-margin md:px-margin-md lg:px-margin-lg">
+<!-- Module Header -->
+<div class="text-center max-w-xl mx-auto mb-space-2xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-[#171B26] border border-white/10 rounded-full font-mono-badge text-mono-badge text-[#60A5FA] mb-space-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-[#60A5FA] animate-pulse"></span>
+          INITIATE CONTACT
+        </div>
+<h2 class="font-headline-lg text-headline-lg text-white tracking-tight">
+          Ready to engineer the future?
+        </h2>
+<p class="font-body-md text-body-md text-[#94A3B8] mt-space-sm">
+          Tell us about your technical objectives, system constraints, or the problem you are looking to solve.
+        </p>
+</div>
+<!-- Interactive Form Container -->
+<div class="bg-[#111827] rounded-xl border border-white/10 p-space-lg md:p-space-xl shadow-2xl relative">
+<!-- Track Switch Toggle -->
+<div class="flex items-center justify-center mb-space-xl">
+<div class="bg-[#0B0F19] p-1 rounded-lg border border-white/10 flex gap-1">
+<button class="px-4 py-2 rounded-md font-label-caps text-label-caps bg-[#2563EB] text-white" type="button">
+              AI Consulting &amp; Strategy
+            </button>
+<button class="px-4 py-2 rounded-md font-label-caps text-label-caps text-[#94A3B8] hover:text-white transition-colors" type="button">
+              Custom Engineering &amp; Build
+            </button>
+</div>
+</div>
+<form class="space-y-space-md" onsubmit="event.preventDefault(); alert('Brief received. Aditya Kadam and our engineering team will respond within 24 hours.');">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Full Name -->
+<div class="space-y-1">
+<label class="block font-label-caps text-label-caps text-[#94A3B8]">Full Name *</label>
+<input class="w-full bg-[#0B0F19] border border-white/10 rounded-lg px-3.5 py-2.5 text-white placeholder-[#475569] text-sm focus:border-[#2563EB] focus:ring-1 focus:ring-[#2563EB] transition-colors" placeholder="Alex Mercer" required="" type="text"/>
+</div>
+<!-- Work Email -->
+<div class="space-y-1">
+<label class="block font-label-caps text-label-caps text-[#94A3B8]">Work Email *</label>
+<input class="w-full bg-[#0B0F19] border border-white/10 rounded-lg px-3.5 py-2.5 text-white placeholder-[#475569] text-sm focus:border-[#2563EB] focus:ring-1 focus:ring-[#2563EB] transition-colors" placeholder="alex@enterprise.com" required="" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Company / Org -->
+<div class="space-y-1">
+<label class="block font-label-caps text-label-caps text-[#94A3B8]">Company / Organization *</label>
+<input class="w-full bg-[#0B0F19] border border-white/10 rounded-lg px-3.5 py-2.5 text-white placeholder-[#475569] text-sm focus:border-[#2563EB] focus:ring-1 focus:ring-[#2563EB] transition-colors" placeholder="Acme Systems Corp" required="" type="text"/>
+</div>
+<!-- Service Category Dropdown -->
+<div class="space-y-1">
+<label class="block font-label-caps text-label-caps text-[#94A3B8]">Primary Category *</label>
+<select class="w-full bg-[#0B0F19] border border-white/10 rounded-lg px-3.5 py-2.5 text-white text-sm focus:border-[#2563EB] focus:ring-1 focus:ring-[#2563EB] transition-colors">
+<option>GenAI &amp; Agentic Orchestration</option>
+<option>Enterprise AI Strategy &amp; Roadmap</option>
+<option>Custom Software &amp; Cloud Infra</option>
+<option>Low-Latency RAG Architecture</option>
+<option>Fractional AI Leadership</option>
+</select>
+</div>
+</div>
+<!-- Budget Tier Radio Pills -->
+<div class="space-y-2">
+<label class="block font-label-caps text-label-caps text-[#94A3B8]">Estimated Budget Envelope</label>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+<label class="cursor-pointer">
+<input checked="" class="peer sr-only" name="budget" type="radio"/>
+<div class="p-2.5 rounded-lg border border-white/10 bg-[#0B0F19] text-center font-mono-badge text-mono-badge text-[#94A3B8] peer-checked:border-[#2563EB] peer-checked:text-white peer-checked:bg-[#2563EB]/10 transition-colors">
+                  $10k – $25k
+                </div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="budget" type="radio"/>
+<div class="p-2.5 rounded-lg border border-white/10 bg-[#0B0F19] text-center font-mono-badge text-mono-badge text-[#94A3B8] peer-checked:border-[#2563EB] peer-checked:text-white peer-checked:bg-[#2563EB]/10 transition-colors">
+                  $25k – $50k
+                </div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="budget" type="radio"/>
+<div class="p-2.5 rounded-lg border border-white/10 bg-[#0B0F19] text-center font-mono-badge text-mono-badge text-[#94A3B8] peer-checked:border-[#2563EB] peer-checked:text-white peer-checked:bg-[#2563EB]/10 transition-colors">
+                  $50k – $100k
+                </div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="budget" type="radio"/>
+<div class="p-2.5 rounded-lg border border-white/10 bg-[#0B0F19] text-center font-mono-badge text-mono-badge text-[#94A3B8] peer-checked:border-[#2563EB] peer-checked:text-white peer-checked:bg-[#2563EB]/10 transition-colors">
+                  $100k+
+                </div>
+</label>
+</div>
+</div>
+<!-- Project Description -->
+<div class="space-y-1">
+<label class="block font-label-caps text-label-caps text-[#94A3B8]">Detailed Technical Requirements *</label>
+<textarea class="w-full bg-[#0B0F19] border border-white/10 rounded-lg p-3.5 text-white placeholder-[#475569] text-sm focus:border-[#2563EB] focus:ring-1 focus:ring-[#2563EB] transition-colors" placeholder="Describe your data pipeline, throughput expectations, latency targets, and current blockers..." required="" rows="4"></textarea>
+</div>
+<!-- Trust Marks -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs text-[#94A3B8] pt-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-[#60A5FA]" data-icon="lock">lock</span>
+<span>NDAs signed prior to discovery calls</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-[#60A5FA]" data-icon="schedule">schedule</span>
+<span>Response within 24 hours guaranteed</span>
+</div>
+</div>
+<!-- Submit CTA -->
+<div class="pt-2">
+<button class="w-full py-4 bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-label-caps text-label-caps rounded-lg shadow-[0_0_24px_rgba(37,99,235,0.4)] transition-all font-semibold uppercase tracking-wider flex items-center justify-center gap-2" type="submit">
+<span>Submit Project Inquiry</span>
+<span class="material-symbols-outlined text-sm" data-icon="send">send</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 10. FOOTER (Shared Components JSON Anchor: Footer)                        -->
+<!-- ========================================================================= -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant/30 text-on-surface">
+<div class="max-w-7xl mx-auto px-margin md:px-margin-md lg:px-margin-lg py-space-xl flex flex-col md:flex-row items-center justify-between gap-space-md w-full">
+<!-- Brand & Copyright -->
+<div class="flex flex-col sm:flex-row items-center gap-space-sm text-center sm:text-left">
+<a class="font-headline-sm text-headline-sm text-on-surface uppercase font-bold tracking-tight" href="#">
+          Rebuild Labs
+        </a>
+<span class="hidden sm:inline text-outline-variant">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+          © 2025 Rebuild Labs Inc. High-velocity AI engineering. All rights reserved.
+        </span>
+</div>
+<!-- Links defined strictly in JSON -->
+<div class="flex flex-wrap items-center justify-center gap-4 text-on-surface-variant">
+<a class="font-body-sm text-body-sm hover:text-on-surface transition-colors duration-150 flex items-center gap-1.5" href="#">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          Systems Status: Operational
+        </a>
+<a class="font-body-sm text-body-sm hover:text-on-surface transition-colors duration-150" href="#">
+          Security Architecture
+        </a>
+<a class="font-body-sm text-body-sm hover:text-on-surface transition-colors duration-150" href="#">
+          Model Evaluations
+        </a>
+<a class="font-body-sm text-body-sm hover:text-on-surface transition-colors duration-150" href="#">
+          Engineering Log
+        </a>
+<a class="font-body-sm text-body-sm hover:text-on-surface transition-colors duration-150" href="#">
+          Client Portal
+        </a>
+<a class="font-body-sm text-body-sm hover:text-on-surface transition-colors duration-150" href="#">
+          Privacy &amp; Terms
+        </a>
+</div>
+</div>
+</footer>
+</body></html>
