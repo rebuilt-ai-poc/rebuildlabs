@@ -29,7 +29,7 @@ export default function Header() {
         <div className="flex h-18 items-center justify-between">
           {/* Studio Brand */}
           <a href="#" className="flex items-center gap-3 group">
-            <div className="relative h-9 w-9 overflow-hidden rounded-xl bg-stone-950 flex items-center justify-center p-1 shadow-xs group-hover:scale-105 transition-all duration-200">
+            <div className="relative h-9 w-9 flex items-center justify-center group-hover:scale-105 transition-transform duration-200">
               <Image
                 src="/brand/logo-icon-transparent.png"
                 alt="Rebuild Labs Logo"
