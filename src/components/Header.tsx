@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
 import { navLinks, siteConfig } from '@/lib/constants';
@@ -28,8 +29,15 @@ export default function Header() {
         <div className="flex h-18 items-center justify-between">
           {/* Studio Brand */}
           <a href="#" className="flex items-center gap-3 group">
-            <div className="h-9 w-9 rounded-xl bg-stone-900 flex items-center justify-center text-white font-semibold text-sm shadow-sm group-hover:bg-[#2563eb] transition-colors duration-200">
-              R
+            <div className="relative h-9 w-9 overflow-hidden rounded-xl bg-stone-950 flex items-center justify-center p-1 shadow-xs group-hover:scale-105 transition-all duration-200">
+              <Image
+                src="/brand/logo-icon-transparent.png"
+                alt="Rebuild Labs Logo"
+                width={36}
+                height={36}
+                className="h-full w-full object-contain"
+                priority
+              />
             </div>
             <div className="flex flex-col">
               <span className="text-base font-bold tracking-tight text-stone-950">

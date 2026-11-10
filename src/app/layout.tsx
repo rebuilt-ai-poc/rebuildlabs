@@ -32,6 +32,11 @@ export const metadata: Metadata = {
   authors: [{ name: "Rebuild Labs" }],
   creator: "Rebuild Labs",
   metadataBase: new URL("https://rebuildlabs.in"),
+  icons: {
+    icon: '/brand/logo-icon-transparent.png',
+    shortcut: '/brand/logo-icon-transparent.png',
+    apple: '/brand/logo-icon-transparent.png',
+  },
   openGraph: {
     title: "Rebuild Labs — AI Consulting & Engineering",
     description:
@@ -40,12 +45,21 @@ export const metadata: Metadata = {
     siteName: "Rebuild Labs",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/brand/Rebuild Labs Corporate Tech Lockup.png",
+        width: 1774,
+        height: 887,
+        alt: "Rebuild Labs",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Rebuild Labs — AI Consulting & Engineering",
     description:
       "Stop experimenting. Start shipping AI that works. We design, engineer and deploy AI systems and custom software that solve operational problems.",
+    images: ["/brand/Rebuild Labs Corporate Tech Lockup.png"],
   },
   robots: {
     index: true,

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
 import { siteConfig } from '@/lib/constants';
 import { StatusDot } from '@astryxdesign/core/StatusDot';
@@ -56,13 +57,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-8">
           {/* Brand Info */}
           <div className="md:col-span-5 space-y-4">
-            <a href="#" className="flex items-center gap-2.5">
-              <div className="h-8 w-8 rounded-xl bg-stone-900 flex items-center justify-center shadow-sm text-white font-semibold text-sm">
-                R
-              </div>
-              <span className="text-lg font-bold tracking-tight text-stone-950">
-                {siteConfig.name}
-              </span>
+            <a href="#" className="inline-block group">
+              <Image
+                src="/brand/logo-lockup-transparent.png"
+                alt="Rebuild Labs"
+                width={190}
+                height={95}
+                className="h-10 w-auto object-contain -ml-1 group-hover:opacity-90 transition-opacity"
+              />
             </a>
 
             <p className="text-sm text-stone-600 max-w-sm leading-relaxed">
