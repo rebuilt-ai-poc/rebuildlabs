@@ -12,9 +12,9 @@ import {
   Phone,
   MapPin,
   Clock,
-  Sparkles,
 } from 'lucide-react';
 import { siteConfig } from '@/lib/constants';
+import { StatusDot } from '@astryxdesign/core/StatusDot';
 
 type EngagementType = 'consulting' | 'development';
 
@@ -131,7 +131,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 lg:py-32 bg-[#121316] text-white relative overflow-hidden">
+    <section id="contact" className="py-24 lg:py-32 bg-stone-950 text-white relative overflow-hidden">
       {/* Background glow & subtle pattern */}
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#2563eb]/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-stone-500/5 rounded-full blur-3xl pointer-events-none" />
@@ -147,30 +147,30 @@ export default function Contact() {
             className="lg:col-span-5 space-y-8"
           >
             <div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-1 text-xs font-medium text-stone-300 mb-4">
-                <Sparkles className="h-3.5 w-3.5 text-[#3b82f6]" />
-                Direct Communication
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-1 text-xs font-mono uppercase tracking-wider text-blue-400 mb-4">
+                <StatusDot variant="accent" label="Direct" isPulsing />
+                <span>Direct Studio Access</span>
               </div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.1]">
-                Start a project or <span className="text-stone-400">request an advisory session.</span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.12]">
+                Start a project or <span className="text-stone-400 font-medium">request an advisory session.</span>
               </h2>
               <p className="mt-4 text-base text-stone-400 leading-relaxed">
-                Whether you need a 1-on-1 technical consultation or end-to-end production software engineering, share your requirements below. Every inquiry is reviewed directly by our principal architect within 24 business hours.
+                Whether you need a 1-on-1 technical architecture review or full-lifecycle production software engineering, share your requirements below. Every inquiry is reviewed directly by our founder within 24 business hours.
               </p>
             </div>
 
             <div className="border-t border-white/10 pt-8 space-y-6">
               <div className="flex items-start gap-3.5">
-                <div className="p-2 rounded-lg bg-white/5 border border-white/10 text-[#60a5fa] shrink-0 mt-0.5">
+                <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 text-blue-400 shrink-0 mt-0.5">
                   <Mail className="h-4 w-4" />
                 </div>
                 <div>
-                  <p className="text-xs font-medium text-stone-400 uppercase tracking-wider">
+                  <p className="text-xs font-mono uppercase tracking-wider text-stone-400">
                     Direct Email
                   </p>
                   <a
                     href={`mailto:${siteConfig.email}`}
-                    className="mt-1 text-sm font-semibold text-white hover:text-[#60a5fa] transition-colors"
+                    className="mt-1 text-sm font-semibold text-white hover:text-blue-400 transition-colors"
                   >
                     {siteConfig.email}
                   </a>
@@ -178,16 +178,16 @@ export default function Contact() {
               </div>
 
               <div className="flex items-start gap-3.5">
-                <div className="p-2 rounded-lg bg-white/5 border border-white/10 text-[#60a5fa] shrink-0 mt-0.5">
+                <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 text-blue-400 shrink-0 mt-0.5">
                   <Phone className="h-4 w-4" />
                 </div>
                 <div>
-                  <p className="text-xs font-medium text-stone-400 uppercase tracking-wider">
+                  <p className="text-xs font-mono uppercase tracking-wider text-stone-400">
                     Direct Phone / WhatsApp
                   </p>
                   <a
                     href={`tel:${siteConfig.phone}`}
-                    className="mt-1 text-sm font-semibold text-white hover:text-[#60a5fa] transition-colors"
+                    className="mt-1 text-sm font-semibold text-white hover:text-blue-400 transition-colors"
                   >
                     {siteConfig.phoneDisplay}
                   </a>
@@ -195,25 +195,25 @@ export default function Contact() {
               </div>
 
               <div className="flex items-start gap-3.5">
-                <div className="p-2 rounded-lg bg-white/5 border border-white/10 text-[#60a5fa] shrink-0 mt-0.5">
+                <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 text-blue-400 shrink-0 mt-0.5">
                   <Clock className="h-4 w-4" />
                 </div>
                 <div>
-                  <p className="text-xs font-medium text-stone-400 uppercase tracking-wider">
+                  <p className="text-xs font-mono uppercase tracking-wider text-stone-400">
                     Response SLA
                   </p>
                   <p className="mt-1 text-sm text-stone-300">
-                    Within 24 business hours. No gatekeeping, direct conversation with engineering.
+                    Within 24 business hours. Direct conversation with engineering.
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3.5">
-                <div className="p-2 rounded-lg bg-white/5 border border-white/10 text-[#60a5fa] shrink-0 mt-0.5">
+                <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 text-blue-400 shrink-0 mt-0.5">
                   <MapPin className="h-4 w-4" />
                 </div>
                 <div>
-                  <p className="text-xs font-medium text-stone-400 uppercase tracking-wider">
+                  <p className="text-xs font-mono uppercase tracking-wider text-stone-400">
                     Global Delivery
                   </p>
                   <p className="mt-1 text-sm text-stone-300">
@@ -226,7 +226,7 @@ export default function Contact() {
             {/* Direct Booking Notice */}
             <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
               <div className="flex items-center gap-3">
-                <Calendar className="h-5 w-5 text-[#60a5fa] shrink-0" />
+                <Calendar className="h-5 w-5 text-blue-400 shrink-0" />
                 <div>
                   <h4 className="text-sm font-semibold text-white">Prefer to talk directly?</h4>
                   <p className="text-xs text-stone-400 mt-0.5">
@@ -237,7 +237,7 @@ export default function Contact() {
             </div>
           </motion.div>
 
-          {/* Right Column: Interactive Form */}
+          {/* Right Column: Interactive Controlled Form */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -288,31 +288,31 @@ export default function Contact() {
 
                     {/* Engagement Type Selector */}
                     <div>
-                      <label className="block text-xs font-medium text-stone-400 mb-2">
+                      <label className="block text-xs font-mono uppercase tracking-wider text-stone-400 mb-2">
                         Engagement Track
                       </label>
                       <div className="grid grid-cols-2 gap-2 p-1 rounded-2xl bg-white/5 border border-white/10">
                         <button
                           type="button"
                           onClick={() => setFormData((prev) => ({ ...prev, type: 'consulting' }))}
-                          className={`py-2.5 text-xs md:text-sm font-semibold rounded-xl transition-all duration-200 ${
+                          className={`py-2.5 text-xs md:text-sm font-semibold rounded-xl transition-all duration-200 cursor-pointer ${
                             formData.type === 'consulting'
-                              ? 'bg-white text-[#121316] shadow-sm'
+                              ? 'bg-white text-stone-950 shadow-sm'
                               : 'text-stone-400 hover:text-white'
                           }`}
                         >
-                          Consulting &amp; Advisory
+                          Consulting &amp; Advisory ($300+)
                         </button>
                         <button
                           type="button"
                           onClick={() => setFormData((prev) => ({ ...prev, type: 'development' }))}
-                          className={`py-2.5 text-xs md:text-sm font-semibold rounded-xl transition-all duration-200 ${
+                          className={`py-2.5 text-xs md:text-sm font-semibold rounded-xl transition-all duration-200 cursor-pointer ${
                             formData.type === 'development'
-                              ? 'bg-white text-[#121316] shadow-sm'
+                              ? 'bg-white text-stone-950 shadow-sm'
                               : 'text-stone-400 hover:text-white'
                           }`}
                         >
-                          Engineering &amp; Build
+                          Engineering &amp; Build ($15,000+)
                         </button>
                       </div>
                     </div>
@@ -320,8 +320,8 @@ export default function Contact() {
                     {/* Two-Column: Name & Email */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                       <div>
-                        <label htmlFor="name" className="block text-xs font-medium text-stone-300 mb-1.5">
-                          Your Name <span className="text-[#3b82f6]">*</span>
+                        <label htmlFor="name" className="block text-xs font-mono text-stone-300 mb-1.5">
+                          Your Name <span className="text-blue-400">*</span>
                         </label>
                         <input
                           id="name"
@@ -331,12 +331,12 @@ export default function Contact() {
                           value={formData.name}
                           onChange={handleChange}
                           placeholder="e.g. Sarah Lin"
-                          className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-stone-600 focus:border-[#3b82f6] focus:bg-white/[0.07] focus:outline-none transition-all"
+                          className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-stone-600 focus:border-blue-500 focus:bg-white/[0.07] focus:outline-none transition-all"
                         />
                       </div>
                       <div>
-                        <label htmlFor="email" className="block text-xs font-medium text-stone-300 mb-1.5">
-                          Work Email <span className="text-[#3b82f6]">*</span>
+                        <label htmlFor="email" className="block text-xs font-mono text-stone-300 mb-1.5">
+                          Work Email <span className="text-blue-400">*</span>
                         </label>
                         <input
                           id="email"
@@ -346,7 +346,7 @@ export default function Contact() {
                           value={formData.email}
                           onChange={handleChange}
                           placeholder="sarah@company.com"
-                          className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-stone-600 focus:border-[#3b82f6] focus:bg-white/[0.07] focus:outline-none transition-all"
+                          className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-stone-600 focus:border-blue-500 focus:bg-white/[0.07] focus:outline-none transition-all"
                         />
                       </div>
                     </div>
@@ -354,7 +354,7 @@ export default function Contact() {
                     {/* Two-Column: Company & Service */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                       <div>
-                        <label htmlFor="company" className="block text-xs font-medium text-stone-300 mb-1.5">
+                        <label htmlFor="company" className="block text-xs font-mono text-stone-300 mb-1.5">
                           Company / Organization
                         </label>
                         <input
@@ -364,12 +364,12 @@ export default function Contact() {
                           value={formData.company}
                           onChange={handleChange}
                           placeholder="Acme Corp or Stealth Startup"
-                          className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-stone-600 focus:border-[#3b82f6] focus:bg-white/[0.07] focus:outline-none transition-all"
+                          className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-stone-600 focus:border-blue-500 focus:bg-white/[0.07] focus:outline-none transition-all"
                         />
                       </div>
                       <div>
-                        <label htmlFor="service" className="block text-xs font-medium text-stone-300 mb-1.5">
-                          Primary Service <span className="text-[#3b82f6]">*</span>
+                        <label htmlFor="service" className="block text-xs font-mono text-stone-300 mb-1.5">
+                          Primary Service <span className="text-blue-400">*</span>
                         </label>
                         <select
                           id="service"
@@ -377,13 +377,13 @@ export default function Contact() {
                           required
                           value={formData.service}
                           onChange={handleChange}
-                          className="w-full rounded-xl border border-white/10 bg-[#1e2025] px-4 py-3 text-sm text-white focus:border-[#3b82f6] focus:outline-none transition-all cursor-pointer"
+                          className="w-full rounded-xl border border-white/10 bg-stone-900 px-4 py-3 text-sm text-white focus:border-blue-500 focus:outline-none transition-all cursor-pointer"
                         >
                           <option value="" disabled>
                             Select primary requirement
                           </option>
                           {serviceOptions.map((opt) => (
-                            <option key={opt} value={opt} className="bg-[#1e2025] text-white">
+                            <option key={opt} value={opt} className="bg-stone-900 text-white">
                               {opt}
                             </option>
                           ))}
@@ -393,7 +393,7 @@ export default function Contact() {
 
                     {/* Budget Range (Optional) */}
                     <div>
-                      <label htmlFor="budget" className="block text-xs font-medium text-stone-300 mb-1.5">
+                      <label htmlFor="budget" className="block text-xs font-mono text-stone-300 mb-1.5">
                         Estimated Budget Range <span className="text-stone-500 font-normal">(optional)</span>
                       </label>
                       <select
@@ -401,11 +401,11 @@ export default function Contact() {
                         name="budget"
                         value={formData.budget}
                         onChange={handleChange}
-                        className="w-full rounded-xl border border-white/10 bg-[#1e2025] px-4 py-3 text-sm text-white focus:border-[#3b82f6] focus:outline-none transition-all cursor-pointer"
+                        className="w-full rounded-xl border border-white/10 bg-stone-900 px-4 py-3 text-sm text-white focus:border-blue-500 focus:outline-none transition-all cursor-pointer"
                       >
                         <option value="">Select an approximate range</option>
                         {budgetRanges.map((b) => (
-                          <option key={b} value={b} className="bg-[#1e2025] text-white">
+                          <option key={b} value={b} className="bg-stone-900 text-white">
                             {b}
                           </option>
                         ))}
@@ -414,8 +414,8 @@ export default function Contact() {
 
                     {/* Project Description */}
                     <div>
-                      <label htmlFor="description" className="block text-xs font-medium text-stone-300 mb-1.5">
-                        Project Overview &amp; Key Goals <span className="text-[#3b82f6]">*</span>
+                      <label htmlFor="description" className="block text-xs font-mono text-stone-300 mb-1.5">
+                        Project Overview &amp; Key Goals <span className="text-blue-400">*</span>
                       </label>
                       <textarea
                         id="description"
@@ -425,7 +425,7 @@ export default function Contact() {
                         value={formData.description}
                         onChange={handleChange}
                         placeholder="Tell us what you're looking to achieve, existing constraints, data assets, or timeline..."
-                        className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-stone-600 focus:border-[#3b82f6] focus:bg-white/[0.07] focus:outline-none transition-all resize-none"
+                        className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-stone-600 focus:border-blue-500 focus:bg-white/[0.07] focus:outline-none transition-all resize-none"
                       />
                     </div>
 
@@ -441,7 +441,7 @@ export default function Contact() {
                     <button
                       type="submit"
                       disabled={status === 'loading'}
-                      className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-[#121316] hover:bg-[#3b82f6] hover:text-white disabled:opacity-50 disabled:pointer-events-none transition-all duration-200 shadow-lg shadow-black/10 cursor-pointer"
+                      className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-stone-950 hover:bg-blue-600 hover:text-white disabled:opacity-50 disabled:pointer-events-none transition-all duration-200 shadow-lg cursor-pointer"
                     >
                       {status === 'loading' ? (
                         <>
@@ -457,7 +457,7 @@ export default function Contact() {
                     </button>
 
                     <p className="text-center text-xs text-stone-500">
-                      Zero spam guarantee. Your project information is held in strict commercial confidentiality.
+                      Commercial confidentiality assured. We sign standard NDAs before technical discovery.
                     </p>
                   </form>
                 )}

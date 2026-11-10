@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
 import { navLinks, siteConfig } from '@/lib/constants';
+import { StatusDot } from '@astryxdesign/core/StatusDot';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,58 +20,66 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/80 backdrop-blur-xl border-b border-stone-200/60 shadow-[0_1px_3px_rgba(0,0,0,0.04)]'
+          ? 'bg-white/85 backdrop-blur-xl border-b border-stone-200/80 shadow-[0_1px_3px_rgba(0,0,0,0.03)]'
           : 'bg-transparent'
       }`}
     >
       <nav className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
-          {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
-            <div className="h-8 w-8 rounded-lg bg-[#1a1a1a] flex items-center justify-center">
-              <span className="text-white text-sm font-bold">R</span>
+        <div className="flex h-18 items-center justify-between">
+          {/* Studio Brand */}
+          <a href="#" className="flex items-center gap-3 group">
+            <div className="h-9 w-9 rounded-xl bg-stone-900 flex items-center justify-center text-white font-semibold text-sm shadow-sm group-hover:bg-[#2563eb] transition-colors duration-200">
+              R
             </div>
-            <span className="text-lg font-semibold tracking-tight text-[#1a1a1a]">
-              {siteConfig.name}
-            </span>
+            <div className="flex flex-col">
+              <span className="text-base font-bold tracking-tight text-stone-950">
+                {siteConfig.name}
+              </span>
+              <div className="flex items-center gap-1.5 -mt-0.5">
+                <StatusDot variant="success" label="Active" isPulsing />
+                <span className="text-[10px] font-mono uppercase tracking-wider text-stone-500">
+                  Principal Studio
+                </span>
+              </div>
+            </div>
           </a>
 
-          {/* Desktop Nav */}
+          {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm text-stone-600 hover:text-[#1a1a1a] transition-colors duration-200"
+                className="text-sm font-medium text-stone-600 hover:text-stone-950 transition-colors duration-200"
               >
                 {link.label}
               </a>
             ))}
           </div>
 
-          {/* Desktop CTA */}
+          {/* Desktop Action Pill */}
           <div className="hidden md:flex items-center gap-4">
             <a
               href="#contact"
-              className="inline-flex items-center gap-1.5 rounded-full bg-[#1a1a1a] px-5 py-2.5 text-sm font-medium text-white hover:bg-[#2563eb] transition-colors duration-200"
+              className="inline-flex items-center gap-1.5 rounded-full bg-stone-900 px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-white hover:bg-[#2563eb] transition-colors duration-200 shadow-sm"
             >
               Initiate Project
               <ArrowUpRight className="h-3.5 w-3.5" />
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Toggle */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-stone-600 hover:text-[#1a1a1a]"
-            aria-label="Toggle menu"
+            className="md:hidden p-2 text-stone-600 hover:text-stone-950"
+            aria-label="Toggle navigation menu"
           >
             {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </div>
       </nav>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -86,19 +95,21 @@ export default function Header() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="block py-2.5 text-base text-stone-600 hover:text-[#1a1a1a] transition-colors"
+                  className="block py-2.5 text-sm font-medium text-stone-700 hover:text-stone-950 transition-colors"
                 >
                   {link.label}
                 </a>
               ))}
-              <a
-                href="#contact"
-                onClick={() => setIsOpen(false)}
-                className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-[#1a1a1a] px-5 py-2.5 text-sm font-medium text-white hover:bg-[#2563eb] transition-colors"
-              >
-                Initiate Project
-                <ArrowUpRight className="h-3.5 w-3.5" />
-              </a>
+              <div className="pt-3 border-t border-stone-100">
+                <a
+                  href="#contact"
+                  onClick={() => setIsOpen(false)}
+                  className="inline-flex w-full items-center justify-center gap-1.5 rounded-full bg-stone-900 px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-white hover:bg-[#2563eb] transition-colors"
+                >
+                  Initiate Project
+                  <ArrowUpRight className="h-3.5 w-3.5" />
+                </a>
+              </div>
             </div>
           </motion.div>
         )}

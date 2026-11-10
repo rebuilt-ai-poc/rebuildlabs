@@ -1,5 +1,6 @@
 import { ArrowUpRight } from 'lucide-react';
 import { siteConfig } from '@/lib/constants';
+import { StatusDot } from '@astryxdesign/core/StatusDot';
 
 const footerNavigation = {
   offerings: [
@@ -24,12 +25,12 @@ const footerNavigation = {
   ],
   socials: [
     {
-      label: 'LinkedIn',
+      label: 'LinkedIn (/in/adityakadamm)',
       href: siteConfig.linkedin,
       external: true,
     },
     {
-      label: "Founder's Portfolio (about.rebuildlabs.in)",
+      label: "about.rebuildlabs.in",
       href: siteConfig.founderPortfolio,
       external: true,
     },
@@ -56,29 +57,29 @@ export default function Footer() {
           {/* Brand Info */}
           <div className="md:col-span-5 space-y-4">
             <a href="#" className="flex items-center gap-2.5">
-              <div className="h-8 w-8 rounded-xl bg-[#1a1a1a] flex items-center justify-center shadow-sm">
-                <span className="text-white text-sm font-bold tracking-wider">R</span>
+              <div className="h-8 w-8 rounded-xl bg-stone-900 flex items-center justify-center shadow-sm text-white font-semibold text-sm">
+                R
               </div>
-              <span className="text-lg font-bold tracking-tight text-[#1a1a1a]">
+              <span className="text-lg font-bold tracking-tight text-stone-950">
                 {siteConfig.name}
               </span>
             </a>
 
-            <p className="text-sm text-stone-500 max-w-sm leading-relaxed">
+            <p className="text-sm text-stone-600 max-w-sm leading-relaxed">
               {siteConfig.subheadline}
             </p>
 
             <div className="pt-2">
-              <span className="inline-flex items-center gap-2 rounded-full border border-stone-200 bg-stone-50 px-3 py-1 text-xs text-stone-600">
-                <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                Available for Q2 Engagements
-              </span>
+              <div className="inline-flex items-center gap-2 rounded-full border border-stone-200 bg-stone-50 px-3 py-1 text-xs text-stone-700">
+                <StatusDot variant="success" label="Active" isPulsing />
+                <span>Available for New Engagements</span>
+              </div>
             </div>
           </div>
 
           {/* Offerings Column */}
           <div className="md:col-span-3">
-            <h4 className="text-xs font-semibold text-stone-900 uppercase tracking-wider">
+            <h4 className="text-xs font-mono uppercase tracking-wider text-stone-900 font-semibold">
               Offerings
             </h4>
             <ul className="mt-4 space-y-2.5">
@@ -86,7 +87,7 @@ export default function Footer() {
                 <li key={item.label}>
                   <a
                     href={item.href}
-                    className="text-xs md:text-sm text-stone-500 hover:text-[#1a1a1a] transition-colors"
+                    className="text-xs md:text-sm text-stone-600 hover:text-stone-950 transition-colors"
                   >
                     {item.label}
                   </a>
@@ -97,7 +98,7 @@ export default function Footer() {
 
           {/* Company Column */}
           <div className="md:col-span-2">
-            <h4 className="text-xs font-semibold text-stone-900 uppercase tracking-wider">
+            <h4 className="text-xs font-mono uppercase tracking-wider text-stone-900 font-semibold">
               Company
             </h4>
             <ul className="mt-4 space-y-2.5">
@@ -107,7 +108,7 @@ export default function Footer() {
                     href={item.href}
                     target={item.external ? '_blank' : undefined}
                     rel={item.external ? 'noopener noreferrer' : undefined}
-                    className="inline-flex items-center gap-1 text-xs md:text-sm text-stone-500 hover:text-[#1a1a1a] transition-colors"
+                    className="inline-flex items-center gap-1 text-xs md:text-sm text-stone-600 hover:text-stone-950 transition-colors"
                   >
                     {item.label}
                     {item.external && <ArrowUpRight className="h-3 w-3 text-stone-400" />}
@@ -119,7 +120,7 @@ export default function Footer() {
 
           {/* Connect Column */}
           <div className="md:col-span-2">
-            <h4 className="text-xs font-semibold text-stone-900 uppercase tracking-wider">
+            <h4 className="text-xs font-mono uppercase tracking-wider text-stone-900 font-semibold">
               Connect
             </h4>
             <ul className="mt-4 space-y-2.5">
@@ -129,7 +130,7 @@ export default function Footer() {
                     href={item.href}
                     target={item.external ? '_blank' : undefined}
                     rel={item.external ? 'noopener noreferrer' : undefined}
-                    className="inline-flex items-center gap-1 text-xs md:text-sm text-stone-500 hover:text-[#1a1a1a] transition-colors"
+                    className="inline-flex items-center gap-1 text-xs md:text-sm text-stone-600 hover:text-stone-950 transition-colors"
                   >
                     {item.label}
                     {item.external && <ArrowUpRight className="h-3 w-3 text-stone-400" />}
