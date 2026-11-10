@@ -57,13 +57,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-8">
           {/* Brand Info */}
           <div className="md:col-span-5 space-y-4">
-            <a href="#" className="inline-block group">
+            <a href="#" className="inline-block group mb-1">
               <Image
                 src="/brand/logo-lockup-transparent.png"
                 alt="Rebuild Labs"
-                width={190}
-                height={95}
-                className="h-10 w-auto object-contain -ml-1 group-hover:opacity-90 transition-opacity"
+                width={240}
+                height={56}
+                className="h-12 sm:h-14 w-auto object-contain -ml-1 group-hover:opacity-90 transition-opacity"
               />
             </a>
 
